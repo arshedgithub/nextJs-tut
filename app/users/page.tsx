@@ -1,9 +1,11 @@
 import React from 'react'
 import Button from '../components/button';
+import UserItem from '../components/User';
 
 interface User {
     id: number;
     name: string;
+    email: string;
 }
 
 const UserPage = async () => {
@@ -14,7 +16,7 @@ const UserPage = async () => {
   return (
     <>
         <h1>Users</h1>
-        <ul>{users.map(user => <li key={user.id}>{user.name}</li>)}</ul>
+        <div>{users.map(user => <UserItem user={user} />)}</div>
 
         <Button />
     </>
