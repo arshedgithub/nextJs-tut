@@ -11,7 +11,7 @@ interface User {
 
 const UserItem = ({ user }: User) => {
     return (
-        <div key={user.id} className={styles.card}>
+        <div key={user.id} className="p-5 my-5 bg-sky-400 text-white text-xl hover:bg-sky-500">
             <div>{user.name}</div>
             <div>{user.email}</div>
         </div>
